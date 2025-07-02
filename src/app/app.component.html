@@ -73,81 +73,67 @@
   <!-- Hero Section -->
   <section
     id="top"
-    class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-mint-100 overflow-hidden"
+    class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-mint-100 to-mint-200 overflow-hidden"
   >
-    <!-- Background Blobs -->
-    <svg
-      class="absolute -top-32 -left-24 w-[30rem] h-[30rem] text-mint-200 opacity-30 z-0 animate-blob-slow"
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="currentColor"
-        d="M44.8,-71.6C57.5,-62.7,66.2,-48.1,67.8,-34.3C69.3,-20.5,63.6,-7.4,58.3,5.8C53,19.1,47.9,32.5,38.7,42.8C29.5,53.1,16.2,60.3,2.1,61.7C-12.1,63.1,-24.2,58.7,-35.3,51.2C-46.3,43.7,-56.3,33,-64.5,19.7C-72.7,6.3,-79,-9.6,-75.1,-22.3C-71.1,-35,-57.1,-44.4,-43.5,-53.5C-29.9,-62.5,-15,-71.1,-0.6,-70.3C13.8,-69.5,27.5,-59.5,44.8,-71.6Z"
-        transform="translate(100 100)"
-      />
-    </svg>
+    <!-- Blobs for background design -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <svg
+        class="absolute -top-40 -left-32 w-[35rem] h-[35rem] text-mint-200 opacity-40 animate-blob-slow"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M44.8,-71.6C57.5,-62.7,66.2,-48.1,67.8,-34.3C69.3,-20.5,63.6,-7.4,58.3,5.8C53,19.1,47.9,32.5,38.7,42.8C29.5,53.1,16.2,60.3,2.1,61.7C-12.1,63.1,-24.2,58.7,-35.3,51.2C-46.3,43.7,-56.3,33,-64.5,19.7C-72.7,6.3,-79,-9.6,-75.1,-22.3C-71.1,-35,-57.1,-44.4,-43.5,-53.5C-29.9,-62.5,-15,-71.1,-0.6,-70.3C13.8,-69.5,27.5,-59.5,44.8,-71.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
 
-    <svg
-      class="absolute top-20 right-0 w-[20rem] h-[20rem] text-mint-300 opacity-40 z-0 animate-blob-medium"
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="currentColor"
-        d="M38.5,-65.5C48.6,-54.4,55.8,-43.1,64.3,-30.7C72.8,-18.3,82.7,-4.8,80.6,6.7C78.5,18.2,64.4,27.8,52.6,38.4C40.8,49,31.4,60.6,18.8,66.7C6.2,72.9,-9.5,73.5,-24.8,69.8C-40.1,66.1,-55,58.2,-61.7,45.9C-68.3,33.6,-66.7,17,-63.5,2C-60.4,-13.1,-55.8,-26.2,-47.3,-37.1C-38.9,-47.9,-26.7,-56.6,-13.6,-64.1C-0.5,-71.7,13.5,-78.2,25.5,-74.2C37.4,-70.3,47.4,-55.7,38.5,-65.5Z"
-        transform="translate(100 100)"
-      />
-    </svg>
+      <svg
+        class="absolute top-24 right-0 w-[30rem] h-[30rem] text-mint-300 opacity-30 animate-blob-medium"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M38.5,-65.5C48.6,-54.4,55.8,-43.1,64.3,-30.7C72.8,-18.3,82.7,-4.8,80.6,6.7C78.5,18.2,64.4,27.8,52.6,38.4C40.8,49,31.4,60.6,18.8,66.7C6.2,72.9,-9.5,73.5,-24.8,69.8C-40.1,66.1,-55,58.2,-61.7,45.9C-68.3,33.6,-66.7,17,-63.5,2C-60.4,-13.1,-55.8,-26.2,-47.3,-37.1C-38.9,-47.9,-26.7,-56.6,-13.6,-64.1C-0.5,-71.7,13.5,-78.2,25.5,-74.2C37.4,-70.3,47.4,-55.7,38.5,-65.5Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </div>
 
-    <svg
-      class="absolute bottom-4 left-12 w-[20rem] h-[20rem] text-mint-200 opacity-40 z-0 animate-blob-medium"
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="currentColor"
-        d="M38.3,-66.4C50.8,-58.4,62.1,-50.2,68.2,-38.4C74.3,-26.5,75.3,-11,72.9,3.4C70.4,17.8,64.5,30.9,56.3,42.4C48.1,54,37.7,64.1,25.3,68.3C12.9,72.4,-1.6,70.7,-16.7,68C-31.7,65.3,-47.2,61.6,-55.7,50.6C-64.2,39.5,-65.6,21.2,-67.1,3.2C-68.6,-14.8,-70.2,-32.6,-62.8,-44.9C-55.4,-57.1,-38.9,-63.7,-23.6,-69.6C-8.3,-75.5,5.8,-80.7,19.2,-76.3C32.5,-71.9,45.1,-57.8,38.3,-66.4Z"
-        transform="translate(100 100)"
-      />
-    </svg>
-
-    <!-- Main Content -->
+    <!-- Hero Content -->
     <div
-      class="relative z-10 max-w-2xl animate-fade-in flex flex-col items-center"
+      class="relative z-10 max-w-2xl animate-fade-in flex flex-col items-center text-center"
     >
-      <!-- Profile Image with Glow -->
       <div class="relative group mb-6">
         <div
           class="absolute inset-0 rounded-full bg-mint-200 opacity-30 blur-2xl scale-110 z-0 group-hover:scale-125 group-hover:opacity-40 transition-all duration-500"
         ></div>
-
         <img
           src="assets/Profile.jpg"
           alt="Chrystler Denver Bonete"
-          class="relative w-40 h-40 rounded-full border-4 border-white shadow-lg object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
+          class="relative w-44 h-44 rounded-full border-4 border-white shadow-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
         />
       </div>
-
-      <!-- Name + Role -->
-      <h1 class="text-5xl font-extrabold text-mint-800 mb-3 leading-tight">
+      <h1
+        class="text-5xl md:text-6xl font-extrabold text-mint-800 mb-3 leading-tight drop-shadow-sm"
+      >
         Chrystler Denver Bonete
       </h1>
       <span
-        class="text-medium bg-white text-mint-600 font-medium px-3 py-1 rounded-full shadow-sm mb-2 uppercase tracking-wide"
+        class="text-sm md:text-base bg-white text-mint-600 font-medium px-4 py-2 rounded-full shadow-sm mb-4 uppercase tracking-wide"
       >
         Aspiring Web Developer
       </span>
-      <p class="text-gray-700 text-lg max-w-md mx-auto mb-8">
+      <p class="text-gray-700 text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
         I aspire to craft engaging, intuitive user interfaces while also
-        expanding my skills in backend development to bring complete web
-        experiences to life.
+        expanding my skills in backend development to deliver full-fledged web
+        solutions.
       </p>
-
-      <!-- Call to Action -->
       <a
         href="#projects"
-        class="inline-flex items-center gap-2 bg-mint-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-xl hover:bg-mint-700 transition-all duration-300 animate-glow"
+        class="inline-flex items-center gap-2 bg-mint-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-xl hover:bg-mint-700 transition-all duration-300 animate-glow"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +199,7 @@
           intuitive, and visually engaging user interfaces. I love turning
           complex ideas into clean, user-friendly digital experiences.
         </p>
-        <p class="text-gray-700 text-base mb-6 animate-fade-in">
+        <p class="text-gray-700 text-lg leading-relaxed mb-4 animate-fade-in">
           My focus is in front-end development, but I also enjoy working on the
           backend when needed. I’m always learning, always building, and always
           looking for ways to improve.
@@ -252,7 +238,14 @@
           <ul class="space-y-6">
             <li>
               <div class="flex justify-between items-center mb-1">
-                <img src="assets/icons/HTML.svg" title="HTML" class="w-6 h-6" />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/HTML.svg"
+                    title="HTML"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">HTML</span>
+                </div>
                 <span class="text-sm text-gray-500">80%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -264,7 +257,10 @@
             </li>
             <li>
               <div class="flex justify-between items-center mb-1">
-                <img src="assets/icons/CSS.svg" title="CSS" class="w-6 h-6" />
+                <div class="flex items-center gap-2">
+                  <img src="assets/icons/CSS.svg" title="CSS" class="w-6 h-6" />
+                  <span class="text-sm text-gray-700 font-medium">CSS</span>
+                </div>
                 <span class="text-sm text-gray-500">75%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -276,11 +272,16 @@
             </li>
             <li>
               <div class="flex justify-between items-center mb-1">
-                <img
-                  src="assets/icons/JavaScript.svg"
-                  title="JavaScript"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/JavaScript.svg"
+                    title="JavaScript"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium"
+                    >JavaScript</span
+                  >
+                </div>
                 <span class="text-sm text-gray-500">70%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -292,11 +293,16 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/TypeScript.svg"
-                  title="TypeScript"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/TypeScript.svg"
+                    title="TypeScript"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium"
+                    >TypeScript</span
+                  >
+                </div>
                 <span class="text-sm text-gray-500">65%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -308,11 +314,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Angular.svg"
-                  title="Angular"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Angular.svg"
+                    title="Angular"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">Angular</span>
+                </div>
                 <span class="text-sm text-gray-500">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -324,11 +333,16 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Tailwind.svg"
-                  title="Tailwind"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Tailwind.svg"
+                    title="Tailwind"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium"
+                    >Tailwind</span
+                  >
+                </div>
                 <span class="text-sm text-gray-500">70%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -351,11 +365,14 @@
           <ul class="space-y-6">
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Node.svg"
-                  title="NodeJS"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Node.svg"
+                    title="NodeJS"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">NodeJS</span>
+                </div>
                 <span class="text-sm text-gray-500">65%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -367,11 +384,16 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Express.svg"
-                  title="ExpressJS"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Express.svg"
+                    title="ExpressJS"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium"
+                    >ExpressJS</span
+                  >
+                </div>
                 <span class="text-sm text-gray-500">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -383,11 +405,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/MongoDB.svg"
-                  title="MongoDB"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/MongoDB.svg"
+                    title="MongoDB"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">MongoDB</span>
+                </div>
                 <span class="text-sm text-gray-500">55%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -399,7 +424,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img src="assets/icons/CSharp.svg" title="C#" class="w-6 h-6" />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/CSharp.svg"
+                    title="C#"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">C#</span>
+                </div>
                 <span class="text-sm text-gray-500">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -422,11 +454,14 @@
           <ul class="space-y-6">
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Github.svg"
-                  title="GitHub"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Github.svg"
+                    title="GitHub"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">GitHub</span>
+                </div>
                 <span class="text-sm text-gray-500">65%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -438,11 +473,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/VS.svg"
-                  title="VS Code"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/VS.svg"
+                    title="VS Code"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">VS Code</span>
+                </div>
                 <span class="text-sm text-gray-500">80%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -454,11 +492,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/VS22.svg"
-                  title="VS 2022"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/VS22.svg"
+                    title="VS 2022"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">VS 2022</span>
+                </div>
                 <span class="text-sm text-gray-500">70%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -470,11 +511,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Postman.svg"
-                  title="Postman"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Postman.svg"
+                    title="Postman"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">Postman</span>
+                </div>
                 <span class="text-sm text-gray-500">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -486,11 +530,14 @@
             </li>
             <li>
               <div class="flex justify-between mb-1">
-                <img
-                  src="assets/icons/Figma.svg"
-                  title="Figma"
-                  class="w-6 h-6"
-                />
+                <div class="flex items-center gap-2">
+                  <img
+                    src="assets/icons/Figma.svg"
+                    title="Figma"
+                    class="w-6 h-6"
+                  />
+                  <span class="text-sm text-gray-700 font-medium">Figma</span>
+                </div>
                 <span class="text-sm text-gray-500">65%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
@@ -524,7 +571,7 @@
       >
         <!-- Project Card -->
         <div
-          class="bg-white border border-mint-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-mint-300 cursor-pointer group flex flex-col"
+          class="bg-white border border-mint-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-mint-300 cursor-pointer group flex flex-col"
         >
           <!-- Project Image -->
           <div
@@ -543,10 +590,7 @@
             </h3>
             <p class="text-gray-600 text-sm mb-4">
               A cafeteria operations system designed for call center agents to
-              time in for attendance and earn meal credits, which can be
-              redeemed for free meals at the canteen. The system also functions
-              as a POS for the concessionaire, allowing seamless credit-based
-              transactions during order processing.
+              time in, earn credits, and process POS transactions.
             </p>
 
             <!-- Tags -->
@@ -559,19 +603,15 @@
               >
             </div>
 
-            <!-- Footer Links Always at Bottom -->
+            <!-- Footer -->
             <div
               class="mt-auto pt-4 border-t text-sm flex justify-between items-center"
             >
-              <a href="#" class="text-mint-600 hover:underline font-medium"
-                >Live Demo →</a
-              >
               <a
-                href="#"
-                target="_blank"
-                class="text-gray-500 hover:text-gray-700"
+                (click)="openModal(modalData.cafeteria)"
+                class="text-mint-600 hover:underline font-medium cursor-pointer"
               >
-                GitHub
+                More →
               </a>
             </div>
           </div>
@@ -579,7 +619,7 @@
 
         <!-- Project Card -->
         <div
-          class="bg-white border border-mint-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-mint-300 cursor-pointer group flex flex-col"
+          class="bg-white border border-mint-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-mint-300 cursor-pointer group flex flex-col"
         >
           <!-- Project Image -->
           <div
@@ -614,22 +654,45 @@
               >
             </div>
 
-            <!-- Footer Links Always at Bottom -->
+            <!-- Footer -->
             <div
               class="mt-auto pt-4 border-t text-sm flex justify-between items-center"
             >
-              <a href="#" class="text-mint-600 hover:underline font-medium"
-                >Live Demo →</a
-              >
               <a
-                href="https://github.com/Azrael717171/Jitech.git"
-                target="_blank"
-                class="text-gray-500 hover:text-gray-700"
+                (click)="openModal(modalData.jitech)"
+                class="text-mint-600 hover:underline font-medium cursor-pointer"
               >
-                GitHub
+                More →
               </a>
             </div>
           </div>
+        </div>
+
+        <!-- Coming Soon Card -->
+        <div
+          class="bg-white border border-dashed border-mint-200 rounded-xl shadow-sm p-6 flex flex-col justify-center items-center text-center opacity-80 hover:opacity-100 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-12 h-12 text-mint-400 mb-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+          <h3 class="text-lg font-semibold text-mint-700 mb-2">
+            More Projects Coming Soon
+          </h3>
+          <p class="text-sm text-gray-500 max-w-xs">
+            I'm constantly building and learning—check back later to see what
+            I've created next!
+          </p>
         </div>
 
         <!-- Duplicate cards with unique content as needed -->
@@ -647,13 +710,21 @@
       </p>
       <p class="text-sm text-gray-500 mb-10">Last updated: June 2025</p>
 
-      <!-- Resume Preview -->
+      <!-- Resume Preview Styled -->
       <div
-        class="relative shadow-lg rounded-lg overflow-hidden mb-10 animate-fade-in"
+        class="relative mb-10 max-w-4xl mx-auto rounded-xl shadow-xl overflow-hidden animate-fade-in"
       >
+        <!-- Browser Bar Mock -->
+        <div class="bg-white px-4 py-2 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-400"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+          <span class="w-3 h-3 rounded-full bg-green-400"></span>
+        </div>
+
+        <!-- Resume Embed -->
         <iframe
           src="/assets/Resume.pdf"
-          class="w-full h-[30rem] border-0"
+          class="w-full h-[30rem] border-0 bg-white"
           title="Resume Preview"
         ></iframe>
       </div>
@@ -693,33 +764,45 @@
         Have a project or just want to say hi? Feel free to reach out.
       </p>
 
-      <!-- Contact Form Card -->
-      <div class="bg-gray-50 shadow-lg rounded-xl p-8 animate-fade-in">
+      <!-- Contact Form Card Enhanced -->
+      <div
+        class="bg-white rounded-2xl shadow-xl p-10 border border-mint-100 animate-fade-in"
+      >
+        <div class="mb-6 text-left">
+          <h3 class="text-2xl font-semibold text-mint-700">
+            Send me a message
+          </h3>
+          <p class="text-gray-500 text-sm">
+            I'll try to get back as soon as I can.
+          </p>
+        </div>
         <form
           action="https://formspree.io/f/xblybjad"
           method="POST"
           class="space-y-5"
         >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-mint-500 focus:outline-none"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-mint-500 focus:outline-none"
-          />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-mint-500 focus:outline-none"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-mint-500 focus:outline-none"
+            />
+          </div>
           <textarea
             name="message"
             placeholder="Your Message"
-            rows="4"
+            rows="5"
             required
-            class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-mint-500 focus:outline-none resize-none"
+            class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-mint-500 focus:outline-none resize-none"
           ></textarea>
 
           <!-- Optional: Custom subject or redirect -->
@@ -736,7 +819,7 @@
 
           <button
             type="submit"
-            class="flex items-center justify-center gap-2 bg-mint-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-mint-700 transition animate-glow"
+            class="flex items-center justify-center gap-2 bg-mint-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-mint-700 transition animate-glow"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -844,3 +927,15 @@
     </a>
   </div>
 </footer>
+
+<app-project-modal
+  *ngIf="showModal"
+  [id]="selectedProject.id"
+  [title]="selectedProject.title"
+  [description]="selectedProject.description"
+  [tags]="selectedProject.tags"
+  [imageUrl]="selectedProject.imageUrl"
+  [githubUrl]="selectedProject.githubUrl"
+  [visible]="showModal"
+  (click)="closeModal()"
+></app-project-modal>

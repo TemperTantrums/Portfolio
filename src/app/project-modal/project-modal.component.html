@@ -1,0 +1,68 @@
+<div
+  [id]="id"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
+>
+  <div
+    class="bg-white max-w-xl w-full rounded-xl shadow-lg overflow-hidden relative animate-fade-in"
+  >
+    <!-- Close Button -->
+    <button
+      (click)="closeModal()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-mint-600 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+
+    <!-- Modal Content -->
+    <div class="p-6">
+      <!-- Title -->
+      <h2 class="text-2xl font-bold text-mint-700 mb-2">{{ title }}</h2>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 text-xs mb-4">
+        <span
+          *ngFor="let tag of tags"
+          class="bg-mint-100 text-mint-700 px-2 py-1 rounded"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
+      <!-- Image -->
+      <img
+        *ngIf="imageUrl"
+        [src]="imageUrl"
+        alt="{{ title }}"
+        class="w-full h-58 object-cover rounded-lg mb-4"
+      />
+
+      <!-- Description -->
+      <p class="text-gray-700 text-sm mb-6">{{ description }}</p>
+
+      <!-- GitHub Link -->
+      <div class="text-right">
+        <a
+          *ngIf="githubUrl"
+          [href]="githubUrl"
+          target="_blank"
+          class="text-mint-600 font-medium hover:underline"
+        >
+          View on GitHub →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
