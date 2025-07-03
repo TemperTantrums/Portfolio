@@ -18,6 +18,7 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 export class AppComponent implements OnInit {
   title = 'Portfolio';
   showModal = false;
+  isMobileMenuOpen = false;
 
   selectedProject = {
     id: '',
@@ -99,5 +100,13 @@ export class AppComponent implements OnInit {
         link.classList.remove('text-mint-600', 'font-bold');
       }
     });
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
   }
 }

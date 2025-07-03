@@ -1,69 +1,133 @@
 <!-- Header Section -->
 <nav
-  class="bg-white/90 backdrop-blur shadow-sm fixed top-0 left-0 w-full z-50 transition-all"
+  class="bg-white/90 backdrop-blur shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300"
 >
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-6xl mx-auto px-6 relative">
     <div class="flex justify-between items-center h-16">
-      <!-- Logo / Name -->
-      <a href="#top" class="text-mint-600 font-extrabold text-xl tracking-wide">
-        Chrystler Denver Bonete
-      </a>
+      <!-- Logo -->
+      <a href="#top" class="text-mint-600 font-extrabold text-xl tracking-wide"
+        >Chrystler Denver Bonete</a
+      >
+
+      <!-- Hamburger Icon for Mobile -->
+      <button
+        (click)="toggleMobileMenu()"
+        class="md:hidden focus:outline-none"
+        aria-label="Toggle Menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-mint-700"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
 
       <!-- Navigation Links -->
       <div
-        class="flex space-x-8 text-mint-700 font-medium text-medium tracking-wide"
+        class="hidden md:flex space-x-8 text-mint-700 font-medium text-medium tracking-wide items-center"
       >
         <a
           href="#about"
-          class="relative group transition nav-link"
+          class="relative group nav-link transition"
           data-scrollspy="about"
+          aria-label="About Section"
         >
           About
           <span
-            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-mint-500 transition-all group-hover:w-full"
+            class="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-mint-500 transition-all duration-300 ease-in-out group-hover:w-full"
           ></span>
         </a>
         <a
           href="#skills"
-          class="relative group transition nav-link"
+          class="relative group nav-link transition"
           data-scrollspy="skills"
+          aria-label="Skills Section"
         >
           Skills
           <span
-            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-mint-500 transition-all group-hover:w-full"
+            class="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-mint-500 transition-all duration-300 ease-in-out group-hover:w-full"
           ></span>
         </a>
         <a
           href="#projects"
-          class="relative group transition nav-link"
+          class="relative group nav-link transition"
           data-scrollspy="projects"
+          aria-label="Projects Section"
         >
           Projects
           <span
-            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-mint-500 transition-all group-hover:w-full"
+            class="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-mint-500 transition-all duration-300 ease-in-out group-hover:w-full"
           ></span>
         </a>
         <a
           href="#resume"
-          class="relative group transition nav-link"
+          class="relative group nav-link transition"
           data-scrollspy="resume"
+          aria-label="Resume Section"
         >
           Resume
           <span
-            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-mint-500 transition-all group-hover:w-full"
+            class="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-mint-500 transition-all duration-300 ease-in-out group-hover:w-full"
           ></span>
         </a>
         <a
           href="#contact"
-          class="relative group transition nav-link"
+          class="relative group nav-link transition"
           data-scrollspy="contact"
+          aria-label="Contact Section"
         >
           Contact
           <span
-            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-mint-500 transition-all group-hover:w-full"
+            class="absolute left-0 -bottom-0.5 h-[2px] w-0 bg-mint-500 transition-all duration-300 ease-in-out group-hover:w-full"
           ></span>
         </a>
       </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div
+      *ngIf="isMobileMenuOpen"
+      class="md:hidden w-full bg-white rounded-lg shadow-md p-4 mb-5 space-y-3 animate-slide-down border border-t-gray-200"
+    >
+      <a
+        href="#about"
+        (click)="closeMobileMenu()"
+        class="block text-mint-700 font-semibold"
+        >About</a
+      >
+      <a
+        href="#skills"
+        (click)="closeMobileMenu()"
+        class="block text-mint-700 font-semibold"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        (click)="closeMobileMenu()"
+        class="block text-mint-700 font-semibold"
+        >Projects</a
+      >
+      <a
+        href="#resume"
+        (click)="closeMobileMenu()"
+        class="block text-mint-700 font-semibold"
+        >Resume</a
+      >
+      <a
+        href="#contact"
+        (click)="closeMobileMenu()"
+        class="block text-mint-700 font-semibold"
+        >Contact</a
+      >
     </div>
   </div>
 </nav>
@@ -76,9 +140,10 @@
     class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-mint-100 to-mint-200 overflow-hidden"
   >
     <!-- Blobs for background design -->
-    <div class="absolute inset-0 z-0 overflow-hidden">
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <!-- Blob 1 -->
       <svg
-        class="absolute -top-40 -left-32 w-[35rem] h-[35rem] text-mint-200 opacity-40 animate-blob-slow"
+        class="absolute -top-52 -left-32 sm:-top-40 sm:-left-20 w-[28rem] sm:w-[35rem] h-[28rem] sm:h-[35rem] text-mint-200 opacity-30 animate-blob-slow"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -89,8 +154,9 @@
         />
       </svg>
 
+      <!-- Blob 2 -->
       <svg
-        class="absolute top-24 right-0 w-[30rem] h-[30rem] text-mint-300 opacity-30 animate-blob-medium"
+        class="absolute top-32 sm:top-24 right-0 w-[24rem] sm:w-[30rem] h-[24rem] sm:h-[30rem] text-mint-300 opacity-20 animate-blob-medium"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -154,7 +220,7 @@
     </div>
 
     <!-- Scroll Down Arrow -->
-    <div class="absolute bottom-10 animate-bounce z-10">
+    <div class="absolute bottom-4 sm:bottom-10 z-10 animate-bounce">
       <a href="#about" class="text-mint-700 hover:text-mint-600 transition">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -175,8 +241,9 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="bg-white py-20 px-6">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+  <section id="about" class="bg-white py-24 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Image Side -->
       <!-- Profile Graphic or Image -->
       <div
         class="flex justify-center md:justify-end md:-translate-x-6 animate-fade-in"
@@ -184,32 +251,59 @@
         <img
           src="assets/Profile.jpg"
           alt="Denver Bonete"
-          class="w-72 h-72 lg:w-80 lg:h-80 rounded-2xl shadow-lg border-4 border-mint-100 object-cover transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+          class="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl shadow-xl border-4 border-mint-100 object-cover transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
         />
       </div>
 
-      <!-- Text Content -->
-      <div class="text-center md:text-left">
-        <h2 class="text-4xl font-bold text-mint-800 mb-4">About Me</h2>
-        <p class="text-gray-700 text-lg leading-relaxed mb-4 animate-fade-in">
-          I'm
-          <span class="font-semibold text-mint-600"
+      <!-- Text Side -->
+      <div class="text-center md:text-left space-y-5 animate-fade-in">
+        <h2 class="text-4xl font-extrabold text-mint-800">About Me</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Hi, I'm
+          <span class="text-mint-600 font-semibold"
             >Chrystler Denver Bonete</span
-          >, a full-stack web developer with a passion for crafting smooth,
-          intuitive, and visually engaging user interfaces. I love turning
-          complex ideas into clean, user-friendly digital experiences.
+          >
+          — a passionate full-stack developer focused on building intuitive,
+          elegant, and efficient user interfaces.
         </p>
-        <p class="text-gray-700 text-lg leading-relaxed mb-4 animate-fade-in">
-          My focus is in front-end development, but I also enjoy working on the
-          backend when needed. I’m always learning, always building, and always
-          looking for ways to improve.
+        <p class="text-gray-700 text-lg leading-relaxed">
+          While my main strength lies in front-end development, I also enjoy
+          diving into backend logic to support seamless full-stack solutions. My
+          mission is to create purposeful web experiences, always learning and
+          evolving along the way.
         </p>
 
-        <!-- Optional CTA -->
+        <!-- Personal Interests -->
+        <div class="mt-6 animate-fade-in">
+          <h3 class="text-xl font-semibold text-mint-700 mb-2">
+            Outside Coding
+          </h3>
+          <p class="text-gray-700 text-base leading-relaxed">
+            When I’m not writing code, I enjoy exploring tech trends, watching
+            anime, or brainstorming new side projects to sharpen my skills and
+            try something fresh. I believe a balanced life fuels creativity and
+            consistent growth.
+          </p>
+        </div>
+
         <a
           href="#skills"
-          class="inline-block bg-mint-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-mint-700 transition animate-fade-in animate-glow"
+          class="inline-flex items-center gap-2 bg-mint-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-mint-700 transition animate-glow"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
           My Skills
         </a>
       </div>
@@ -892,39 +986,48 @@
 </main>
 
 <!-- Footer Section -->
-<footer class="bg-mint-700 text-white py-8 px-6">
+<footer class="bg-mint-700 text-white py-10 px-6 shadow-inner">
   <div
-    class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center"
   >
-    <!-- Name and Year -->
-    <p class="text-sm">© 2025 Chrystler Denver Bonete. All rights reserved.</p>
+    <!-- Name and Copyright -->
+    <div class="text-sm">
+      <p class="font-semibold">Chrystler Denver Bonete</p>
+      <p>© 2025. All rights reserved.</p>
+    </div>
 
-    <!-- Quick Links -->
-    <div class="space-x-4 text-sm">
-      <a href="#about" class="hover:text-mint-200">About</a>
-      <a href="#skills" class="hover:text-mint-200">Skills</a>
-      <a href="#projects" class="hover:text-mint-200">Projects</a>
-      <a href="#resume" class="hover:text-mint-200">Resume</a>
-      <a href="#contact" class="hover:text-mint-200">Contact</a>
+    <!-- Quick Navigation Links -->
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+      <a href="#about" class="hover:text-mint-300 transition">About</a>
+      <a href="#skills" class="hover:text-mint-300 transition">Skills</a>
+      <a href="#projects" class="hover:text-mint-300 transition">Projects</a>
+      <a href="#resume" class="hover:text-mint-300 transition">Resume</a>
+      <a href="#contact" class="hover:text-mint-300 transition">Contact</a>
     </div>
 
     <!-- Back to Top -->
-    <a href="#top" class="hover:text-mint-300 transition">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-5 h-5 animate-bounce"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
+    <div class="flex justify-center md:justify-end">
+      <a
+        href="#top"
+        class="text-white hover:text-mint-300 transition"
+        aria-label="Back to top"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 15l7-7 7 7"
-        />
-      </svg>
-    </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 animate-bounce"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </a>
+    </div>
   </div>
 </footer>
 
