@@ -139,7 +139,7 @@
     id="top"
     class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-mint-100 to-mint-200 overflow-hidden"
   >
-    <!-- Blobs for background design -->
+    <!-- Decorative Blobs -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <!-- Blob 1 -->
       <svg
@@ -153,7 +153,6 @@
           transform="translate(100 100)"
         />
       </svg>
-
       <!-- Blob 2 -->
       <svg
         class="absolute top-32 sm:top-24 right-0 w-[24rem] sm:w-[30rem] h-[24rem] sm:h-[30rem] text-mint-300 opacity-20 animate-blob-medium"
@@ -169,33 +168,22 @@
     </div>
 
     <!-- Hero Content -->
-    <div
-      class="relative z-10 max-w-2xl animate-fade-in flex flex-col items-center text-center"
-    >
-      <div class="relative group mb-6">
-        <div
-          class="absolute inset-0 rounded-full bg-mint-200 opacity-30 blur-2xl scale-110 z-0 group-hover:scale-125 group-hover:opacity-40 transition-all duration-500"
-        ></div>
-        <img
-          src="assets/Profile.jpg"
-          alt="Chrystler Denver Bonete"
-          class="relative w-44 h-44 rounded-full border-4 border-white shadow-xl object-cover transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1"
-        />
-      </div>
+    <div class="relative z-10 max-w-2xl text-center animate-fade-in">
       <h1
-        class="text-5xl md:text-6xl font-extrabold text-mint-800 mb-3 leading-tight drop-shadow-sm"
+        class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-mint-800 mb-4 leading-tight drop-shadow-sm"
       >
-        Chrystler Denver Bonete
+        Hello, I'm Chrystler Denver Bonete
       </h1>
-      <span
-        class="text-sm md:text-base bg-white text-mint-600 font-medium px-4 py-2 rounded-full shadow-sm mb-4 uppercase tracking-wide"
+      <p
+        class="inline-block bg-white text-mint-600 text-md md:text-lg font-medium uppercase tracking-wide px-4 py-1 rounded-full shadow-sm mb-4"
       >
-        Aspiring Web Developer
-      </span>
-      <p class="text-gray-700 text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
-        I aspire to craft engaging, intuitive user interfaces while also
-        expanding my skills in backend development to deliver full-fledged web
-        solutions.
+        Full-Stack Web Developer
+      </p>
+
+      <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-8">
+        I specialize in building sleek and responsive user interfaces while
+        continuously sharpening my backend development skills to create seamless
+        digital experiences from front to back.
       </p>
       <a
         href="#projects"
@@ -481,12 +469,10 @@
                 <div class="flex items-center gap-2">
                   <img
                     src="assets/icons/Express.svg"
-                    title="ExpressJS"
+                    title="Express"
                     class="w-6 h-6"
                   />
-                  <span class="text-sm text-gray-700 font-medium"
-                    >ExpressJS</span
-                  >
+                  <span class="text-sm text-gray-700 font-medium">Express</span>
                 </div>
                 <span class="text-sm text-gray-500">60%</span>
               </div>
@@ -594,12 +580,12 @@
                   />
                   <span class="text-sm text-gray-700 font-medium">VS 2022</span>
                 </div>
-                <span class="text-sm text-gray-500">70%</span>
+                <span class="text-sm text-gray-500">60%</span>
               </div>
               <div class="w-full bg-gray-200 rounded-full h-3">
                 <div
                   class="h-3 bg-gradient-to-r from-mint-400 to-mint-600 rounded-full shadow-inner animate-fill"
-                  style="width: 70%"
+                  style="width: 60%"
                 ></div>
               </div>
             </li>
@@ -683,8 +669,9 @@
               Cafeteria Operations System
             </h3>
             <p class="text-gray-600 text-sm mb-4">
-              A cafeteria operations system designed for call center agents to
-              time in, earn credits, and process POS transactions.
+              A cafeteria operations system in Foundever designed for call
+              center agents to time in, earn credits, and process POS
+              transactions for concessionaires.
             </p>
 
             <!-- Tags -->
@@ -758,6 +745,52 @@
               >
                 More →
               </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card -->
+        <div
+          class="bg-white border border-mint-100 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:border-mint-300 cursor-pointer group flex flex-col"
+        >
+          <!-- Project Image -->
+          <div
+            class="h-48 bg-gray-200 group-hover:opacity-90 transition-all duration-300 rounded-t-xl"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80"
+              alt="Project preview placeholder"
+              class="w-full h-full object-cover rounded-t-xl"
+            />
+          </div>
+
+          <!-- Project Content -->
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-mint-700 mb-2">TaskFlow</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              A lightweight, modern task manager that organizes assignments and
+              projects, track progress visually, manage priorities and due
+              dates, and stay on top of deadlines with reminders.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 text-xs mb-4">
+              <span class="bg-mint-100 text-mint-700 px-2 py-1 rounded"
+                >Angular</span
+              >
+              <span class="bg-mint-100 text-mint-700 px-2 py-1 rounded"
+                >Tailwind</span
+              >
+              <span class="bg-mint-100 text-mint-700 px-2 py-1 rounded"
+                >TypeScript</span
+              >
+            </div>
+
+            <!-- Footer -->
+            <div
+              class="mt-auto pt-4 border-t text-sm flex justify-between items-center"
+            >
+              <a class="text-mint-600 font-medium"> In Progress </a>
             </div>
           </div>
         </div>

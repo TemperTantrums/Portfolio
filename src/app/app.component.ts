@@ -6,8 +6,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { ProjectModalComponent } from './project-modal/project-modal.component';
-
+import { ProjectModalComponent } from './components/project-modal/project-modal.component';
 @Component({
   selector: 'app-root',
   standalone: true,
